@@ -59,7 +59,9 @@ class ChartController extends Controller
         }
 
         if ($barangay) {
-            $query->where('clinic.brgy_id', $barangay);
+            // $query->where('clinic.brgy_id', $barangay);
+            $query->where('victim.brgy_id', $barangay);
+
         }
 
         // Group data for different chart types
